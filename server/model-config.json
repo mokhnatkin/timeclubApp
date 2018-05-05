@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "MongoDB"
+  },
+  "AccessToken": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "MongoDB",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "MongoDB",
+    "public": true,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "clients": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "guests": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "const": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "promotion": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "staff": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "clientlist": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "booking": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "checkout": {
+    "dataSource": "MongoDB",
+    "public": true
+  },
+  "employee": {
+    "dataSource": "MongoDB",
+    "public": true
+  }
+}
