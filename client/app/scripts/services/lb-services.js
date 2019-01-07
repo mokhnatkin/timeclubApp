@@ -12,7 +12,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 
 (function(window, angular, undefined) {
   'use strict';
-  var urlBase ="https://www.nekafesoft.com/api/";
+  var urlBase ="https://www.nekafesoft.com/api";
   //var urlBase = "http://localhost:3000/api/";
 
   var authHeader = 'authorization';
