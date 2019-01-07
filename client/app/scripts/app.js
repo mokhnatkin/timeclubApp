@@ -227,31 +227,5 @@ angular
             };
         })
 
-    //.filter('searchGuestNameAndCompany', function () {//search for guest - name and company number
-    //    return function (items) {
-    //        var item, res, n, cND, res1, res2;
-    //        var filtered = [];
 
-    //        for (var i = 0; i < items.length; i++) {
-    //            res = true;
-    //            item = items[i];
-    //            n = item.name;
-    //            cND = item.companyN;
-    //            if(n == '' || n == null || n == undefined){
-    //                res1 = false;
-    //            } else {
-    //                res1 = n.includes($scope.search);
-    //            };
-    //            if(cND == '' || cND == null || cND == undefined){
-    //                res2 = false;
-    //            } else {
-    //                var cN = cND.toString();
-    //                res2 = cN.includes($scope.search);
-     //           };
-     //           res = res1 || res2;
-     //           if(res) {filtered.push(item)};
-    //            }
-    //        return filtered;
-    //    };
-    //})
   ;

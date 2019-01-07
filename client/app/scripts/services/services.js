@@ -8,7 +8,7 @@
  * Factories of the timeclubAngularApp
  */
 angular.module('timeclubAngularApp')
-    .constant("baseURL","https://www.nekafesoft.com/api/")
+    .constant("baseURL","https://www.nekafesoft.com/api")
     //.constant("baseURL","http://localhost:3000/api/")
     .constant("serverTimeURL","https://www.nekafesoft.com/time")
 
