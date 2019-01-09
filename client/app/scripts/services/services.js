@@ -10,10 +10,10 @@
 angular.module('timeclubAngularApp')
     //.constant("baseURL","https://www.nekafesoft.com/api/")
     //.constant("baseURL","http://localhost:3000/api/")
-    .constant("baseURL","http://0.0.0.0:3000/api/")
-    //.constant("baseURL","http://46.101.201.219:3000/api/")
-    //.constant("serverTimeURL","http://46.101.201.219:3001/time")
-    .constant("serverTimeURL","http://0.0.0.0:3001/time")
+    //.constant("baseURL","http://0.0.0.0:3000/api/")
+    .constant("baseURL","http://46.101.201.219:3000/api/")
+    .constant("serverTimeURL","http://46.101.201.219:3001/time")
+    //.constant("serverTimeURL","http://0.0.0.0:3001/time")
 
 
     .factory('serverTimeFactory',['$resource','serverTimeURL',function($resource,serverTimeURL)//guests - in the club now
