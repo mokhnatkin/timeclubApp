@@ -92,7 +92,7 @@ angular.module('timeclubAngularApp')
         $scope.isPaidButtonActive = true;
     };
 
-    $scope.cancleCheckoutGuests = function(){
+    $scope.cancelCheckoutGuests = function(){
         $scope.deleteCheckouts();
         $state.go("app", {}, { reload: true });
     };
@@ -106,5 +106,25 @@ angular.module('timeclubAngularApp')
     $scope.convertMinutes = function(minutes){//convert timeinClub (minutes) into dd, hh, mm
         var res = convertMMtoDDHHMM.convertMinutes(minutes);
         return res;
-      };
+    };
+
+    $scope.defineBtnClass = function(isChecked){//change button class based on isChecked attr
+        var btnClass = "btn btn-default";
+        if (isChecked){
+            btnClass = "btn btn-default";
+        } else {
+            btnClass = "btn btn-success";
+        }        
+        return btnClass;
+    };
+
+    $scope.defineBtnTxt = function(isChecked){//change button class based on isChecked attr
+        var btnTxt = "Нет";
+        if (isChecked){
+            btnTxt = "Нет";
+        } else {
+            btnTxt = "Да";
+        }        
+        return btnTxt;
+    };
 }]);

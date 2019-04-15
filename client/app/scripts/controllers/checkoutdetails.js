@@ -16,7 +16,7 @@ angular.module('timeclubAngularApp')
       $scope.showInfo = false;
       checkoutFactory.query(  //fetch guests from the REST server
         function(response) {
-          $scope.guestsToCheckout = response; //all guests are now in this array: $scope.guests        
+          $scope.guestsToCheckout = response; //all guests are now in this array        
           N = $scope.guestsToCheckout.length;
           if (N > 0) {
             $scope.showInfo = true;

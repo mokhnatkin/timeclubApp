@@ -9,12 +9,15 @@
                     <td><h3>Всего сумма:</h3></td>
                     <td><h3><strong>{{amountCheckout | number:0}}</strong></h3></td>
                 </tr>
-            </table>            
+            </table>
         </div>
         <div class="table-wrapper">
+            <button class="btn btn-success" ng-click="checkoutGuests()" ng-disabled="isPaidButtonActive">Да</button>
+            <button class="btn btn-danger" ng-click="cancelCheckoutGuests()" ng-disabled="isPaidButtonActive">Отмена</button>
+            <button class="btn btn-info" ng-click="closeCheckoutWindow()" ng-disabled="!isPaidButtonActive">Оплачено</button>            
             <table class="table table-condensed">
                 <thead>
-                    <tr>                        
+                    <tr>
                         <th>Имя</th>
                         <th>№</th>
                         <th align="center">Сумма</th>
@@ -24,6 +27,7 @@
                         <th>Акция</th>
                         <th class="narrowColumn">Время прихода</th>                        
                         <th>Комментарий</th>
+                        <th>Статус оплаты</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,12 +41,13 @@
                         <td>{{getPromoNameById(guestToCheckout.promotion)}}</td>
                         <td class="narrowColumn">{{guestToCheckout.arrivalTime | date: 'dd.MM.y H:mm:ss' : '+0600'}}</td>                        
                         <td>{{guestToCheckout.comment}}</td>
+                        <td><button ng-class="defineBtnClass(guestToCheckout.isChecked)" ng-click="guestToCheckout.isChecked=!guestToCheckout.isChecked">{{defineBtnTxt(guestToCheckout.isChecked)}}</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <button class="btn btn-success" ng-click="checkoutGuests()" ng-disabled="isPaidButtonActive">Да</button>
-        <button class="btn btn-danger" ng-click="cancleCheckoutGuests()" ng-disabled="isPaidButtonActive">Отмена</button>
-        <button class="btn btn-info" ng-click="closeCheckoutWindow()" ng-disabled="!isPaidButtonActive">Оплачено</button>        
+        <button class="btn btn-danger" ng-click="cancelCheckoutGuests()" ng-disabled="isPaidButtonActive">Отмена</button>
+        <button class="btn btn-info" ng-click="closeCheckoutWindow()" ng-disabled="!isPaidButtonActive">Оплачено</button>
     </div>
 </div>
