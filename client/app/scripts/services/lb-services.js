@@ -13,7 +13,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
 (function(window, angular, undefined) {
   'use strict';
   //var urlBase for production mode
-  var urlBase = "http://46.101.201.219:3000/api/";
+  //46.101.201.219 - digital ocean
+  //194.87.99.245 - RU VDS  
+  var urlBase = "http://194.87.99.245:3000/api/";
   //var urlBase for local development mode
   //var urlBase = "http://localhost:3000/api/";
   
