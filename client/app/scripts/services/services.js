@@ -8,9 +8,7 @@
  * Factories of the timeclubAngularApp
  */
 angular.module('timeclubAngularApp')
-    //constants baseURL and serverTimeURL for production mode
-    //46.101.201.219 - digital ocean
-    //194.87.99.245 - RU VDS
+    //constants baseURL and serverTimeURL for production mode    
     .constant("baseURL","http://194.87.99.245:3000/api/")
     .constant("serverTimeURL","http://194.87.99.245:3001/time")
     //constants baseURL and serverTimeURL for local development mode

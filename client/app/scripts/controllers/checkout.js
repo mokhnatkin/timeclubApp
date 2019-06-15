@@ -73,7 +73,21 @@ angular.module('timeclubAngularApp')
             $scope.guestsToCheckout[i].isActive = false;
             $scope.guestsToCheckout[i].isChecked = false;
             $scope.newClient = new clientFactory(); //new empty client object
-            $scope.newClient = $scope.guestsToCheckout[i];
+            //$scope.newClient = $scope.guestsToCheckout[i];
+            $scope.newClient.name = $scope.guestsToCheckout[i].name;
+            $scope.newClient.arrivalTime = $scope.guestsToCheckout[i].arrivalTime;
+            $scope.newClient.checkoutTime = $scope.guestsToCheckout[i].checkoutTime;
+            $scope.newClient.amount = $scope.guestsToCheckout[i].amount;
+            $scope.newClient.isFree = $scope.guestsToCheckout[i].isFree;
+            $scope.newClient.promotion = $scope.guestsToCheckout[i].promotion;
+            $scope.newClient.comment = $scope.guestsToCheckout[i].comment;
+            $scope.newClient.isActive = $scope.guestsToCheckout[i].isActive;
+            $scope.newClient.isChecked = $scope.guestsToCheckout[i].isChecked;
+            $scope.newClient.timeInClub = $scope.guestsToCheckout[i].timeInClub;
+            $scope.newClient.isEmployee = $scope.guestsToCheckout[i].isEmployee;
+            $scope.newClient.isEmployeeAtWork = $scope.guestsToCheckout[i].isEmployeeAtWork;
+            $scope.newClient.companyN = $scope.guestsToCheckout[i].companyN;
+            $scope.newClient.isDirector = $scope.guestsToCheckout[i].isDirector;
             //now save newClient object to DB
             clientFactory.create($scope.newClient, function(){
                 //saved sucessfully

@@ -152,16 +152,31 @@ angular.module('timeclubAngularApp')
           if (countSelected == 1){//1 guest is selected
             $scope.showChangeButton = false;
             $scope.clients[k].isChecked = false;
-            $scope.guestToBackToMain = $scope.clients[k];
-            $scope.guestToBackToMain.timeInClub = 0;//in order to refresh
-            $scope.guestToBackToMain.amount = 0;//in order to refresh
-            $scope.guestToBackToMain.checkoutTime = null;//in order to refresh
+            //$scope.guestToBackToMain = $scope.clients[k];
+            $scope.guestToBackToMain.name = $scope.clients[k].name;
+            $scope.guestToBackToMain.arrivalTime = $scope.clients[k].arrivalTime;
+            $scope.guestToBackToMain.checkoutTime = null;
+            $scope.guestToBackToMain.amount = 0;
+            $scope.guestToBackToMain.isFree = $scope.clients[k].isFree;
+            $scope.guestToBackToMain.promotion = $scope.clients[k].promotion;
+            $scope.guestToBackToMain.comment = $scope.clients[k].comment;
+            $scope.guestToBackToMain.isActive = $scope.clients[k].isActive;
+            $scope.guestToBackToMain.isChecked = $scope.clients[k].isChecked;
+            $scope.guestToBackToMain.timeInClub = 0;
+            $scope.guestToBackToMain.isEmployee = $scope.clients[k].isEmployee;
+            $scope.guestToBackToMain.isEmployeeAtWork = $scope.clients[k].isEmployeeAtWork;
+            $scope.guestToBackToMain.companyN = $scope.clients[k].companyN;
+            $scope.guestToBackToMain.isDirector = $scope.clients[k].isDirector;            
+            
+            //$scope.guestToBackToMain.timeInClub = 0;//in order to refresh
+            //$scope.guestToBackToMain.amount = 0;//in order to refresh
+            //$scope.guestToBackToMain.checkoutTime = null;//in order to refresh
             //show confirmation window
             confR = window.confirm(msgService.getMsg("confirmBackToMain"));
             if (confR){//confirmed
               //create a new guest
               guestFactory.create($scope.guestToBackToMain, function() {//save the guest
-                clientFactory.remove({id: $scope.guestToBackToMain.id}, function() {//remove the client
+                clientFactory.remove({id: $scope.clients[k].id}, function() {//remove the client
                   //Removed sucessfully
                   $scope.guestToBackToMain = {};
                   $state.reload();
