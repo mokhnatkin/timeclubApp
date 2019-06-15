@@ -2,6 +2,7 @@
   "name": "clients",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": true,
   "options": {
     "validateUpsert": true
   },
